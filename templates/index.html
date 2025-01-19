@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Grader</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Grader</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <label for="resumes">Upload Resumes (PDF Only):</label>
+            <input type="file" name="resumes" id="resumes" multiple required>
+            <button type="submit">Process Resumes</button>
+        </form>
+    </div>
+</body>
+</html>

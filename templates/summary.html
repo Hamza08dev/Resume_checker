@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualizations</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Data Summary</h1>
+        <p><strong>Total Resumes Processed:</strong> {{ summary.total_resumes }}</p>
+        <p><strong>Highest Gen AI Score:</strong> {{ summary.top_gen_ai_score }}</p>
+        <p><strong>People with Top Gen AI Score:</strong></p>
+        <ul>
+            {% for name in summary.top_gen_ai_people %}
+                <li>{{ name }}</li>
+            {% endfor %}
+        </ul>
+        <p><strong>Highest AI/ML Score:</strong> {{ summary.top_ai_ml_score }}</p>
+        <p><strong>People with Top AI/ML Score:</strong></p>
+        <ul>
+            {% for name in summary.top_ai_ml_people %}
+                <li>{{ name }}</li>
+            {% endfor %}
+        </ul>
+        <h2>Top Key Skills</h2>
+        <ul>
+            {% for skill, count in summary.key_skills.items() %}
+                <li>{{ skill }}: {{ count }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

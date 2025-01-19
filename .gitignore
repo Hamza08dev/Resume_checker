@@ -1,0 +1,7 @@
+.idea/
+.env
+.log
+venv/
+__pycache__/
+uploads/
+results/

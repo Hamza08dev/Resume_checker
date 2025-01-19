@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results Generated</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Results Generated!</h1>
+        {% if file_generated %}
+            <a href="{{ url_for('download', file_path=file_path) }}" class="btn btn-primary">Download Results (Excel)</a>
+        {% endif %}
+        <br>
+        <a href="{{ url_for('summary') }}">View Summary</a>
+    </div>
+</body>
+</html>
