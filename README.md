@@ -26,7 +26,7 @@ A web application to process resumes, extract relevant information, and provide 
 
 - Visit the hosted website: https://resume-checker-erld.onrender.com/.
 
-- Upload one or more resumes in supported formats (e.g., PDF, DOCX).
+- Upload one or more resumes in supported formats (PDF).
 
 - Click "Process" to extract and download excel sheet.
 
@@ -58,7 +58,7 @@ A web application to process resumes, extract relevant information, and provide 
 `cd Resume_checker`
 
 #### Create a virtual environment and activate it:
-`python -m venv venv` <br>
+`python -m venv venv` 
 `source venv/bin/activa te`
 
 On Windows, use: `venv\Scripts\activate`
