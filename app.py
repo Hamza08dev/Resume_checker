@@ -71,12 +71,11 @@ def index():
         extracted_data = process_resumes(resume_paths)
         df = pd.DataFrame(extracted_data)
 
-        # Save Excel file in RESULTS_FOLDER with a unique name
+
         excel_path = os.path.join(app.config["RESULTS_FOLDER"], "Resume_Analysis.xlsx")
         with pd.ExcelWriter(excel_path, engine="openpyxl") as writer:
             df.to_excel(writer, index=False)
 
-        # Pass file_path to results.html
         return render_template("results.html", file_generated=True, file_path="Resume_Analysis.xlsx")
 
     return render_template("index.html")
@@ -109,20 +108,17 @@ def summary():
     except FileNotFoundError:
         return "No analysis data available. Please upload resumes first."
 
-    # Ensure required columns exist
     required_columns = ["gen_ai_experience_score", "ai_ml_experience_score", "name", "key_skills"]
     for col in required_columns:
         if col not in df.columns:
             return f"Missing required column: {col}"
 
-    # Find individuals with top scores
     top_gen_ai_score = df["gen_ai_experience_score"].max()
     top_gen_ai_people = df[df["gen_ai_experience_score"] == top_gen_ai_score]["name"].tolist()
 
     top_ai_ml_score = df["ai_ml_experience_score"].max()
     top_ai_ml_people = df[df["ai_ml_experience_score"] == top_ai_ml_score]["name"].tolist()
 
-    # Basic visualization data
     summary = {
         "total_resumes": len(df),
         "top_gen_ai_score": top_gen_ai_score,
