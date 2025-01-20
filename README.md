@@ -3,6 +3,10 @@
 
 
 A web application to process resumes, extract relevant information, and provide valuable insights using AI-powered tools. The website is hosted at: https://resume-checker-erld.onrender.com/
+<br><br>
+
+![image](https://github.com/user-attachments/assets/dccd2bd6-1ddc-4d6e-9bc5-c05b104624d5)
+![image](https://github.com/user-attachments/assets/64a2ed9f-3f67-40f8-adea-bf05eadf6388)
 
 ## Features
 
